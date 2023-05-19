@@ -2,16 +2,12 @@ import os
 import glob
 import torch
 import RNA
-import time
 import torch
 import torch
 import numpy as np
 from io import open
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import random_split
 from torch.nn.utils.rnn import pad_sequence
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset
 
 # one-hot for 1st sequence and 2nd structure
 class OneHot(object):
