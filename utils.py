@@ -191,4 +191,15 @@ class MyDataset(Dataset):
     def __getitem__(self, idx):
         sample = {"input": self.data[idx], "label": self.labels[idx]}
         return sample
+    
+
+# write a function that pads during the batch
+def custom_collate(data): #(2)
+    inputs = [d['input'] for d in data] #(3)
+    labels = [d['label'] for d in data]
+
+    padded_inputs = pad_sequence(inputs, batch_first=True, padding_value=0).squeeze(0) #(4)
+    labels = torch.tensor(labels) #(5)
+
+    return padded_inputs, labels
         
