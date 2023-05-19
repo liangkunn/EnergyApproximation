@@ -10,7 +10,7 @@ The deep learning approach tries to leverage the power of neural networks to app
 ## input:
 Concatenate one-hotted RNA 1st sequence and one-hotted 2nd structure as input. Since they are one-hotted, I do not need to tokenize anymore, only embedding is needed when load into DistilBerts.
 ## output: 
-Energy values
+Experimental energy values
 ## loss function: MSE Loss
 
 # Datasets
