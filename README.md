@@ -17,7 +17,7 @@ For simplicity, use MSE Loss
 # Datasets
 Datasets are obtained from open-source dataset: https://bprna.cgrb.oregonstate.edu/download.php, and I choose to use dot-bracket files.
 
-After processing, the processed datasets turns out to be too large, follow the datapreprocessing.py steps to come up with the dataset.
+After processing, the processed datasets turns out to be too large, follow the datapreprocessing.py steps to produce the training dataset.
 
 # Predicted VS. Expreiment
 ![2711683609174_ pic](https://github.com/liangkunn/EnergyApproximation/assets/36016499/8d87e9f0-7fd3-4034-832b-42f0daa34c24)
