@@ -11,7 +11,8 @@ The deep learning approach tries to leverage the power of neural networks to app
 Concatenate one-hotted RNA 1st sequence and one-hotted 2nd structure as input. Since they are one-hotted, I do not need to tokenize anymore, only embedding is needed when load into DistilBerts.
 ## output: 
 Experimental energy values
-## loss function: MSE Loss
+## loss function: 
+For simplicity, use MSE Loss
 
 # Datasets
 Datasets are obtained from open-source dataset: https://bprna.cgrb.oregonstate.edu/download.php, and I choose to use dot-bracket files
