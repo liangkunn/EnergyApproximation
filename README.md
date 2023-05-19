@@ -18,8 +18,10 @@ Datasets are obtained from open-source dataset: https://bprna.cgrb.oregonstate.e
 
 # Predicted VS. Expreiment
 ![2711683609174_ pic](https://github.com/liangkunn/EnergyApproximation/assets/36016499/8d87e9f0-7fd3-4034-832b-42f0daa34c24)
+
 The model does learn something useful as we can see there is a linear relationship between predicted and experimental energy vlaues. 
 
 # Coefficient
 ![2741683609319_ pic](https://github.com/liangkunn/EnergyApproximation/assets/36016499/90239713-cfe4-4375-bde2-89d9214917c2)
+
 R-square value is 0.81
