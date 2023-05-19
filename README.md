@@ -1,8 +1,8 @@
-# EnergyApproximation
+# Energy Approximation
 Out of curiosity, this repository explores the possibility of using deep learning approaches to approximate the minimum energy after RNA 2nd structure formation
 
 
-# Traditional approach 
+# Traditional approaches
 Traditional approaches for obtaining energy values rely on real-world experiments and Turner parameters, and these methods require significant time, resources, and experimental setups. Deep learning models have shown great promise in various domains, and utilizing them for obtaining energy values could potentially offer faster and more cost-effective alternatives
 
 # Deep learning approaches
