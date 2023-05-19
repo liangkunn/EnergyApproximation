@@ -198,4 +198,49 @@ def custom_collate(data): #(2)
     labels = torch.tensor(labels) #(5)
 
     return padded_inputs, labels
+
+
+# find extreme values
+def find_extremes(loaded_data):
+    max_length = 0
+    max_energy = 0
+    min_energy = 0 
+
+    for data_item in loaded_data:
+        input_tensor = data_item['input']
+        energy = data_item['label']
+        length = input_tensor.shape[0]
+        if length > max_length:
+            max_length = length
+        if energy > max_energy:
+            max_energy = energy
+        if energy < min_energy:
+            min_energy = energy
+    return max_length, max_energy, min_energy
         
+# filter data that is longer than treshold vlaue 800-> decided by yourself
+def filter_by_length(loaded_data, max_length=800):
+    filtered_data = {'input': [], 'label': []}
+
+    for data_item in loaded_data:
+        input_tensor = data_item['input']
+        label = data_item['label']
+        length = input_tensor.shape[0]
+        if length <= max_length:
+            filtered_data['input'].append(input_tensor)
+            filtered_data['label'].append(label)
+
+    return filtered_data
+
+# filter by energy values, throw out extremes
+def filter_by_energy(loaded_data, max_energy=400, min_energy=-400):
+    filtered_data = {'input': [], 'label': []}
+
+    for data_item in loaded_data:
+        input_tensor = data_item['input']
+        label = data_item['label']
+        if min_energy <= label <= max_energy:
+            filtered_data['input'].append(input_tensor)
+            filtered_data['label'].append(label)
+
+    return filtered_data
