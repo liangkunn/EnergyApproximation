@@ -6,13 +6,15 @@ Out of curiosity, this repository explores the possibility of using deep learnin
 Traditional approaches for obtaining energy values rely on real-world experiments and Turner parameters, and these methods require significant time, resources, and experimental setups. Deep learning models have shown great promise in various domains, and utilizing them for obtaining energy values could potentially offer faster and more cost-effective alternatives
 
 # Deep learning approaches
-The deep learning approach tries to leverage the power of neural networks to approximate the minimum energy values of RNA 2nd structures. In this experiment I tried using a DistilBert model and trained it on a dataset that use RNA 1st sequences and 2nd structures as input, and their corresponding minimum energy values obtained through traditional methods (computed by Vienna RNA package) as predicted variable. Hopefully, we can teach the model to learn the underlying patterns and relationships.
+The deep learning approach tries to leverage the power of neural networks to approximate the minimum energy values of RNA 2nd structures. In this experiment I tried using both Transformers and DistilBert models and trained them on a dataset that use RNA 1st sequences and 2nd structures as input, and their corresponding minimum energy values obtained through traditional methods (computed by Vienna RNA package) as predicted variable. Hopefully, we can teach the model to learn the underlying patterns and relationships.
 ## input:
 Concatenate one-hotted RNA 1st sequence and one-hotted 2nd structure as input. Since they are one-hotted, I do not need to tokenize anymore, only embedding is needed when load into DistilBerts.
 ## output: 
 Experimental energy values
 ## loss function: 
 For simplicity, use MSE Loss
+## Saved models:
+Saved Transformer only, because DistilBert too large. Follow the training steps in Visualization_for_results.py to fine-tune the DistilBert model.
 
 # Datasets
 Datasets are obtained from open-source dataset: https://bprna.cgrb.oregonstate.edu/download.php, and I choose to use dot-bracket files.
