@@ -17,9 +17,9 @@ For simplicity, use MSE Loss
 Saved Transformer only, because DistilBert too large. Follow the training steps in Visualization_for_results.py to fine-tune the DistilBert model.
 
 # Datasets
-Datasets are obtained from open-source dataset: https://bprna.cgrb.oregonstate.edu/download.php, and I choose to use dot-bracket files.
+Datasets are obtained from open-source dataset: https://bprna.cgrb.oregonstate.edu/download.php, and I choose to download dot-bracket files, 'dbnFiles.zip'.
 
-After processing, the processed datasets turns out to be too large, follow the datapreprocessing.py steps to produce the training dataset.
+After processing, the processed datasets turns out to be too large, follow the datapreprocessing.py steps to produce the training dataset (download 'bnFiles.zip' first).
 
 # Predicted VS. Expreiment
 ![2711683609174_ pic](https://github.com/liangkunn/EnergyApproximation/assets/36016499/8d87e9f0-7fd3-4034-832b-42f0daa34c24)
